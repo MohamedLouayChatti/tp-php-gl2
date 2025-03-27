@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body class="bg-light">
     <section class="vh-100">
@@ -26,6 +27,17 @@
                                         <input type="text" id="lastName" class="form-control" required>
                                     </div>
                                 </div>
+                                <div class="row grades">
+                                    <div class="mt-3 list-of-grades">
+                                        <label for="Grade" class="form-label">Grades</label>
+                                        <input type="number" id="Grade 1" class="form-control" >
+                                    </div>
+                                    <div class="mt-3">
+                                        <button type="button" class="btn btn-outline-secondary">Add A Grade</button>
+                                    </div>
+                                    
+                                </div>
+                                
 
                                 
 
@@ -41,5 +53,6 @@
     </section>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="grades.js"></script>
 </body>
 </html>
