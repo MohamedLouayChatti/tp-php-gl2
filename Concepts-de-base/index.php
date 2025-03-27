@@ -16,21 +16,21 @@
                         <div class="card-body p-4">
                             <h3 class="mb-4">Add A Student</h3>
 
-                            <form>
+                            <form action="Students.php" method="post">
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label for="firstName" class="form-label">First Name</label>
-                                        <input type="text" id="firstName" class="form-control" required>
+                                        <input type="text" name="firstName" class="form-control" required>
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="lastName" class="form-label">Last Name</label>
-                                        <input type="text" id="lastName" class="form-control" required>
+                                        <input type="text" name="lastName" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="row grades">
                                     <div class="mt-3 list-of-grades">
                                         <label for="Grade" class="form-label">Grades</label>
-                                        <input type="number" id="Grade 1" class="form-control" >
+                                        <input type="number" name="Grades[]" class="form-control" >
                                     </div>
                                     <div class="mt-3">
                                         <button type="button" class="btn btn-outline-secondary">Add A Grade</button>
@@ -56,3 +56,4 @@
     <script src="grades.js"></script>
 </body>
 </html>
+

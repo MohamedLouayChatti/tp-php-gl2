@@ -13,7 +13,7 @@ AddButton.addEventListener('click',()=>{
     NewGrade=`
     <div class="mt-1 d-flex align-items-center gap-2">
             <label for="Grade" class="form-label">Grade ${nbrOfGrades} . </label>
-            <input type="number" id="Grade ${nbrOfGrades}"  class="form-control w-50" >
+            <input type="number" name="Grades[]"  class="form-control w-50" >
             <i class="bi bi-trash" ></i>
     </div>
     `;
