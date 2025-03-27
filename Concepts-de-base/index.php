@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
+
 <body class="bg-light">
     <section class="vh-100">
         <div class="container py-5 h-100">
@@ -30,16 +32,16 @@
                                 <div class="row grades">
                                     <div class="mt-3 list-of-grades">
                                         <label for="Grade" class="form-label">Grades</label>
-                                        <input type="number" name="Grades[]" class="form-control" >
+                                        <input type="number" name="Grades[]" class="form-control">
                                     </div>
                                     <div class="mt-3">
                                         <button type="button" class="btn btn-outline-secondary">Add A Grade</button>
                                     </div>
-                                    
-                                </div>
-                                
 
-                                
+                                </div>
+
+
+
 
                                 <div class="mt-3">
                                     <button type="submit" class="btn btn-primary w-100">Submit</button>
@@ -51,9 +53,9 @@
             </div>
         </div>
     </section>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="grades.js"></script>
 </body>
-</html>
 
+</html>
