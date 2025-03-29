@@ -1,14 +1,14 @@
 <?php
 class attackPokemon{
     public function __construct(
-        public $attackMinimal,
-        public $attackMaximal,
-        public $specialAttack,
-        public $probabilitySpecialAttack
+        public int $attackMinimal,
+        public int $attackMaximal,
+        public int $specialAttack,
+        public int $probabilitySpecialAttack
     )
     {}
 
 }
-    
+
 
 ?>
