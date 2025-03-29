@@ -14,6 +14,9 @@
         <div class="container py-5 h-100">
             <div class="row justify-content-center align-items-center h-100">
                 <div class="col-lg-8 col-xl-6">
+                    <div class="p-3 reset">
+                        <button  class="btn btn-primary ">Restart Session</button>
+                    </div>
                     <div class="card shadow-sm" style="border-radius: 15px;">
                         <div class="card-body p-4">
                             <h3 class="mb-4">Add A Student</h3>

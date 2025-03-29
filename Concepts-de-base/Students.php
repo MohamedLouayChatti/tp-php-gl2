@@ -29,7 +29,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
 
+        
+
     <div class="container mt-4">
+        <div class="p-3 reset">
+                                    <button  class="btn btn-primary ">Restart Session</button>
+        </div>
         <div class="card">
             <div class="card-header fw-bold"><?php echo ($nom); ?></div>
             <ul class="list-group" id="gradesList">
