@@ -27,6 +27,14 @@ class Pokemon{
         $oldHp=$p->getHp();
         $p->setHp($oldHp-$damage);
     }
+
+    public function isDead(){
+        return ($this->hp<=0 );
+    }
+    public function whoAmI(){
+        echo("my name is " . $this->nom . " my hp are  " . $this->hp . " points. The url to my picture " . $this->url ." le nombre de points minimal infligé par mon attack " . $this->attack->attackMinimal .
+    "le nombre de points maximal infligé par mon attack " . $this->attack->attackMaximal . " la probabilite de mon attack special est " . $this->attack->probabilitySpecialAttack  );
+    }
     
 }
 
