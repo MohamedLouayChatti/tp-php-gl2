@@ -35,6 +35,11 @@ class Session{
     public static function getVisits(){
         return self::$visits;
     }
+
+    public static function reset(){
+        header("Location: ".$_SERVER['PHP_SELF']);
+        exit();
+    }
 }
 
 ?>
