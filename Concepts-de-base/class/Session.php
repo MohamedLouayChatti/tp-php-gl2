@@ -39,7 +39,7 @@ class Session{
         foreach($_COOKIE as $key => $val){
             setcookie($key);
         }
-        $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . "/index.php";
+        $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . "/Concepts-de-base/index.php";
 
         header("Location: $url");
         exit();

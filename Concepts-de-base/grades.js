@@ -1,9 +1,4 @@
 let nbrOfGrades = 2;
-let addButtonHTML = `
-<div class="mt-3">
-    <button type="button" class="btn btn-outline-secondary">Add A Grade</button>
-</div>"
-`;
 
 const AddButton = document.querySelector(".btn-outline-secondary");
 
