@@ -5,8 +5,7 @@ class Session{
     private static $visits;
 
     public static function init(){
-        if ($_SERVER['REQUEST_URI'] === '/favicon.ico') {
-            //En cas de 2 requetes
+        if (basename($_SERVER['SCRIPT_NAME']) !== 'index.php') {
             return;
         }
         if(isset($_COOKIE["nbVisits"])){
@@ -37,9 +36,16 @@ class Session{
     }
 
     public static function reset(){
-        header("Location: ".$_SERVER['PHP_SELF']);
+        foreach($_COOKIE as $key => $val){
+            setcookie($key);
+        }
+        $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . "/index.php";
+
+        header("Location: $url");
         exit();
     }
 }
+
+Session::init();
 
 ?>

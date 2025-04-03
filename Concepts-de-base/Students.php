@@ -1,5 +1,10 @@
 <?php
 include_once "class/Etudiant.php";
+require_once "class/Session.php";
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['reset'])) {
+    Session::reset();
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $prenom = $_POST["firstName"];
@@ -9,11 +14,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $etudiant = new etudiant($prenom . " " . $nom, $grades);
-    /* if (!empty($grades)) {
-        echo "Notes reçues : " . implode(", ", $grades);
-    } else {
-        echo "Aucune note reçue.";
-    }*/
 }
 
 
@@ -36,8 +36,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
 
     <div class="container mt-4">
-        <div class="p-3 reset">
-                                    <button  class="btn btn-primary ">Restart Session</button>
+        <div class="p-3">
+            <form method="post">
+                <button type="submit" name="reset" class="btn btn-primary">Restart Session</button>
+            </form>
         </div>
         <?php
         if (isset($etudiant)) {

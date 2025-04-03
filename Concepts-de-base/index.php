@@ -1,3 +1,7 @@
+<?php
+require_once "class/Session.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,10 +18,31 @@
         <div class="container py-5 h-100">
             <div class="row justify-content-center align-items-center h-100">
                 <div class="col-lg-8 col-xl-6">
-                    <div class="p-3 reset">
-                        <button  class="btn btn-primary ">Restart Session</button>
+                    <div class="text-center mb-3">
+                        <h2>
+                            <?php
+                                $visits = Session::getVisits();
+                                if($visits == 1){
+                                    echo "Bienvenu à notre plateforme!";
+                                }else {
+                                    echo " Merci pour votre fidélité, c’est votre {$visits}éme visite.";
+                                }
+                            ?>
+                        </h2>
                     </div>
-                    
+
+                    <div class="p-3">
+                        <form method="post">
+                            <button type="submit" name="reset" class="btn btn-primary">Restart Session</button>
+                        </form>
+                    </div>
+
+                    <?php
+                    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['reset'])) {
+                        Session::reset();
+                    }
+                    ?>
+
                     <div class="card shadow-sm" style="border-radius: 15px;">
                         <div class="card-body p-4">
                             <h3 class="mb-4">Add A Student</h3>
