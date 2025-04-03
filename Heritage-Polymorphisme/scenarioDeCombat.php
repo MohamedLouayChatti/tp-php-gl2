@@ -1,17 +1,26 @@
 <?php 
-include("Pokemon.php");
+require_once "classes/Pokemon.php";
+require_once "classes/PokemonPlante.php";
+require_once "classes/PokemonFeu.php";
+require_once "classes/PokemonEau.php";
 
-$attack1 = new attackPokemon(5,10,2,30);
-$attack2 = new attackPokemon(3,7,3,60);
-$pika= new Pokemon("pikachu","mezel",200,$attack1);
-$barbasor= new Pokemon("barbasor","mezel",200,$attack2);
+$attack1 = new attackPokemon(10,100,2,20);
+$attack2 = new attackPokemon(30,80,4,20);
+$pika= new PokemonEau("pikachu","mezel",200,$attack1);
+$barbasor= new PokemonFeu("barbasor","mezel",200,$attack2);
 
-$pika->whoAmI();echo(".\n");
+$pika->whoAmI();
+echo ".<br> <br>";
+$barbasor->whoAmI();
+echo ".<br> <br>";
+
 while (!$pika->isDead() && !$barbasor->isDead()){
     $pika->attack($barbasor);
     $barbasor->attack($pika);
-    $pika->whoAmI();echo(".<br>");
-    $barbasor->whoAmI();echo(".<br>");
+    $pika->whoAmI();
+    echo ".<br> <br>";
+    $barbasor->whoAmI();
+    echo ".<br> <br>";
 }
 if ($pika->isDead()){
     echo(" barbasor est le vainceur");
