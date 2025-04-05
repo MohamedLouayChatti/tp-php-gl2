@@ -1,6 +1,7 @@
 <?php
 include('autoloader.php');
 $db = ConnexionDB::getInstance();
+$rep= new RepositoryEtudiant("etudiants");
 if (!isset($_GET['id'])) {
     header("Location: index.php");
     exit;
@@ -8,9 +9,8 @@ if (!isset($_GET['id'])) {
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
     $id = $_GET['id'];
 }
-$query = "SELECT * FROM etudiants WHERE id=$id";
-$reponse = $db->query($query);
-$etudiant = $reponse->fetch(PDO::FETCH_OBJ);
+$etudiant=$rep->findById($id);
+
 
 ?>
 <!DOCTYPE html>

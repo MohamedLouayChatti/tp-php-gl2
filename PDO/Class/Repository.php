@@ -19,7 +19,7 @@ abstract class Repository implements IRepository
         $query = "SELECT * from {$this->tableName} where id = :id";
         $response = $this->db->prepare($query);
         $response->execute(['id' => $id]);
-        return $response->fetch(PDO::FETCH_ASSOC);
+        return $response->fetch(PDO::FETCH_OBJ);
     }
     public function delete($id)
     {
