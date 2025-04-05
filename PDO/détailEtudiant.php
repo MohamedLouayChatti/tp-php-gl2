@@ -1,6 +1,6 @@
 <?php
 include('autoloader.php');
-$db = ConnexionDB::getInstance();
+
 $rep= new RepositoryEtudiant("etudiants");
 if (!isset($_GET['id'])) {
     header("Location: index.php");

@@ -29,14 +29,7 @@
                 <label for="email">Email</label>
                 <input type="email" name= "email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
             </div>
-            <div class="form-group">
-                <label for="password">Mot de passe</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="confirm_password">Confirmer le mot de passe</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password" name="confirm_password" required>
-            </div>
+           
             <div class="form-group">
                 <label for="role">Role</label>
                 <select class="form-select" name="role" aria-label="Default select example">
