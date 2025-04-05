@@ -39,10 +39,10 @@
             </div>
             <div class="form-group">
                 <label for="role">Role</label>
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" name="role" aria-label="Default select example">
 
-                    <option value="admin" name="role">Administrateur</option>
-                    <option value="user" name="role">User</option>
+                    <option value="admin" >Administrateur</option>
+                    <option value="user" >User</option>
 
                 </select>
             </div>
