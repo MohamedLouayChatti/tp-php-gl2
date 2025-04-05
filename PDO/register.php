@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
         * {
             margin: 0;
@@ -100,12 +102,13 @@
         }
     </style>
 </head>
+
 <body>
     <div class="register-container">
         <h2 class="register-title">Inscription</h2>
         <?php
         session_start();
-        if(isset($_SESSION['error'])) {
+        if (isset($_SESSION['error'])) {
             echo '<div class="error-message">' . $_SESSION['error'] . '</div>';
             unset($_SESSION['error']);
         }
@@ -127,11 +130,22 @@
                 <label for="confirm_password">Confirmer le mot de passe</label>
                 <input type="password" id="confirm_password" name="confirm_password" required>
             </div>
+            <div class="form-group">
+                <label for="role">Role</label>
+                <select class="form-select" aria-label="Default select example">
+
+                    <option value="admin" name="role">Administrateur</option>
+                    <option value="user" name="role">User</option>
+
+                </select>
+            </div>
             <button type="submit" class="btn-register">S'inscrire</button>
         </form>
         <div class="login-link">
             <p>Déjà un compte ? <a href="index.php">Se connecter</a></p>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> 
+
+</html>
