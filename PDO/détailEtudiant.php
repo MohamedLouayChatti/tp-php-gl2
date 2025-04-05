@@ -1,5 +1,5 @@
 <?php
-include('ConnexionDB.php');
+include('autoloader.php');
 $db = ConnexionDB::getInstance();
 if (!isset($_GET['id'])) {
     header("Location: index.php");

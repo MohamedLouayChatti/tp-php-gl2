@@ -1,6 +1,6 @@
 <?php
-/* include_once "./../autoloader.php"; */
-abstract class Repositroy implements IRepository
+
+abstract class Repository implements IRepository
 {
     protected $db;
     public function __construct(protected $tableName)
