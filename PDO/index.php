@@ -1,5 +1,5 @@
 <?php
-include('ConnexionDB.php');
+include('Class/ConnexionDB.php');
 $db = ConnexionDB::getInstance();
 
 $query = "SELECT * FROM etudiants";
