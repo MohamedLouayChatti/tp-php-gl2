@@ -16,16 +16,16 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="../Home.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="../PDO/Home.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../Etudiants.php">Liste etudiants</a>
+        <a class="nav-link" href="../PDO/Etudiants.php">Liste etudiants</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../Sections.php">Liste Sections</a>
+        <a class="nav-link" href="../PDO/Sections.php">Liste Sections</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../Logout.php">Logout</a>
+        <a class="nav-link" href="../PDO/Logout.php">Logout</a>
       </li>
       
     </ul>
