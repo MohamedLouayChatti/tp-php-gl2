@@ -19,7 +19,7 @@
         <a class="nav-link" href="../PDO/Home.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../PDO/Etudiants.php">Liste etudiants</a>
+        <a class="nav-link" href="../PDO/Liste des etudiants.php">Liste etudiants</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="../PDO/Sections.php">Liste Sections</a>
