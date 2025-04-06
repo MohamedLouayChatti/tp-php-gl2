@@ -11,7 +11,7 @@
 
 <script>
      $(document).ready(function() {
-        $('#example').DataTable({
+        $('#datatable').DataTable({
             dom: 'Bflrtip',
             buttons:[{ extend: 'copy', className: 'btn btn-outline-light me-1' },
                     { extend: 'csv', className: 'btn btn-outline-light me-1' },

@@ -5,14 +5,17 @@ body {
 
 .dataTables_length {
     color: aliceblue;
+    margin: 5px;
 }
 
 .dataTables_filter {
     color: aliceblue;
+    margin: 5px;
 }
 
 .dataTables_info {
     color: aliceblue;
+    margin: 5px;
 }
 
   
