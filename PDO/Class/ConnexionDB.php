@@ -3,7 +3,7 @@ class ConnexionDB
 {
     private static $_dbname = "etudiants";
     private static $_user = "root";
-    private static $_pwd = "21624177";
+    private static $_pwd = "";
     private static $_host = "localhost";
 
     private static $_bdd = null;

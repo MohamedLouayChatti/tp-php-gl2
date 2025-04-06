@@ -31,7 +31,7 @@ CREATE TABLE `etudiants` (
   `id` int NOT NULL,
   `name` varchar(25) NOT NULL,
   `dateDeNaissance` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `etudiants`
