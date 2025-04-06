@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     
     $_SESSION['success'] = "connexion réussie ! Vous pouvez maintenant vous connecter.";
-    header("Location: page.php");
+    header("Location: Home.php");
     exit();
     
 } 
