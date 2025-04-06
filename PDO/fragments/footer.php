@@ -12,8 +12,12 @@
 <script>
      $(document).ready(function() {
         $('#example').DataTable({
-            dom: 'fBrtip',
-            buttons: ['copy','excel','csv','pdf',]
+            dom: 'Bflrtip',
+            buttons:[{ extend: 'copy', className: 'btn btn-outline-light me-1' },
+                    { extend: 'csv', className: 'btn btn-outline-light me-1' },
+                    { extend: 'excel', className: 'btn btn-outline-light me-1' },
+                    { extend: 'pdf', className: 'btn btn-outline-light me-1' }
+            ]
         });
     });
 </script>

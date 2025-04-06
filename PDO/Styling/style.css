@@ -1,4 +1,18 @@
 body {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(65,9,121,1) 50%, rgba(74,0,82,1) 100%);
     min-height: 100vh;
 }
+
+.dataTables_length {
+    color: aliceblue;
+}
+
+.dataTables_filter {
+    color: aliceblue;
+}
+
+.dataTables_info {
+    color: aliceblue;
+}
+
+  
