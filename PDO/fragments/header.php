@@ -6,10 +6,14 @@
     <title>header</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.0/css/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" href="../Styling/style.css">
+
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light px-2">
-    <a class="navbar-brand" href="#">Student Management System</a>
+    <a class="navbar-brand" href="Home.php">Student Management System</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

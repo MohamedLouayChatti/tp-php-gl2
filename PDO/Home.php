@@ -1,2 +1,8 @@
-<?php include "fragments/header.php";
-include "fragments/footer.php";?>
+<?php
+include "fragments/header.php";
+?>
+
+
+<?php
+include "fragments/footer.php";
+?>
