@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -8,7 +7,6 @@
     <title>Logout</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="Styling/register.css">
-    
 </head>
 
 <body>
@@ -18,22 +16,19 @@
         session_start();
 
         if (isset($_POST['confirm'])) {
-
             session_destroy();
             header("Location: Login.php");
             exit();
         } elseif (isset($_POST['cancel'])) {
-
-            header("Location: " . $_SERVER['HTTP_REFERER']);
+            header("Location: Home.php");
             exit();
         }
         ?>
-        <form action="process_register.php" method="POST">
+        <form method="POST">
             <div class="form-group">
-              <button type="submit" name="confirm" class="form-control btn btn-danger">Yes, Logout</button>
-              <button type="submit" name="cancel" class="form-control btn btn-secondary">Cancel</button>
+                <button type="submit" name="confirm" class="form-control btn btn-danger">Yes, Logout</button>
+                <button type="submit" name="cancel" class="form-control btn btn-secondary">Cancel</button>
             </div>
-        
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
