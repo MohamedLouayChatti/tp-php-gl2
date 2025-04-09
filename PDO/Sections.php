@@ -1,9 +1,11 @@
 <?php
+session_start();
 include "fragments/header.php";
-include('autoloader.php');
-$sectionRepository= new RepositorySection("sections");
+include_once('autoloader.php');
+$sectionRepository= new RepositorySection();
 $sections = $sectionRepository->findAll();
-
+$usersRepository = new RepositoryUsers();
+$currentUser = $usersRepository->findByEmail($_SESSION['email']);
 ?>
 
 <div class="container my-4">
@@ -24,7 +26,7 @@ $sections = $sectionRepository->findAll();
                             <td><?= $section->id ?></td>
                             <td><?= $section->designation ?></td>
                             <td><?= $section->description?></td>
-                            <td><a href="sectionStudentList.php?sectionDes=<?= $section->designation ?>" ><i class="bi bi-list-ol"></i></a></td>
+                            <td><?php echo $currentUser ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

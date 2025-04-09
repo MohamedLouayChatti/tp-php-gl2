@@ -1,5 +1,4 @@
 <?php
-include "Repository.php";
 
 class RepositorySection extends Repository
 {
