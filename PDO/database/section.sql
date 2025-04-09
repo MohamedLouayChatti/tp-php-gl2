@@ -1,6 +1,7 @@
 CREATE TABLE `etudiants`.`section` (`id` INT NULL DEFAULT NULL AUTO_INCREMENT ,
- `designation` ENUM('GL','RT','IMI','IIA','MPI','CBA','BIO','CH') NULL DEFAULT '' , 
- `description` VARCHAR(100) NULL DEFAULT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+ `designation` ENUM('GL','RT','IMI','IIA','MPI','CBA','BIO','CH') NOT NULL, 
+ `description` VARCHAR(100) NULL DEFAULT NULL , PRIMARY KEY (`id`)) 
+ ENGINE = InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
  INSERT INTO `section` (`id`, `designation`, `description`) VALUES ('1', 'GL', 'Génie Logiciel'),

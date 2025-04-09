@@ -11,7 +11,7 @@ CREATE TABLE `etudiants`.`etudiant`
  `dateDeNaissance` DATE NOT NULL , 
  `section` ENUM('GL','RT','IMI','IIA','MPI','CBA','BIO','CH') NOT NULL , 
  `imageURL` VARCHAR(100) NOT NULL DEFAULT 'img/default.png' , PRIMARY KEY (`id`)) 
- ENGINE = InnoDB DEFAULT CHARBSBQSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+ ENGINE = InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
  INSERT INTO `etudiant` (`id`, `name`, `dateDeNaissance`, `section`, `imageURL`) VALUES
