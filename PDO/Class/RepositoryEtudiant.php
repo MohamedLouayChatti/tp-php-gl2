@@ -4,7 +4,7 @@ class RepositoryEtudiant extends Repository
 {
     public function __construct()
     {
-        parent::__construct('etudiants');
+        parent::__construct('etudiant');
     }
 
     

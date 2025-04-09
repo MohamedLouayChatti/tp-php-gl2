@@ -4,8 +4,6 @@ include "fragments/header.php";
 include_once('autoloader.php');
 $sectionRepository= new RepositorySection();
 $sections = $sectionRepository->findAll();
-$usersRepository = new RepositoryUsers();
-$currentUser = $usersRepository->findByEmail($_SESSION['email']);
 ?>
 
 <div class="container my-4">
@@ -26,7 +24,7 @@ $currentUser = $usersRepository->findByEmail($_SESSION['email']);
                             <td><?= $section->id ?></td>
                             <td><?= $section->designation ?></td>
                             <td><?= $section->description?></td>
-                            <td><?php echo $currentUser ?></td>
+                            <td></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
