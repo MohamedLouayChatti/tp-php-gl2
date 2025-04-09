@@ -2,9 +2,9 @@
 include_once "class/Etudiant.php";
 require_once "class/Session.php";
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['reset'])) {
-    Session::reset();
-}
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['reset'])) {
+        Session::reset();
+    }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $prenom = $_POST["firstName"];
