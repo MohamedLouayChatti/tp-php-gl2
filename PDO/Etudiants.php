@@ -63,6 +63,6 @@ $role = $currentUser->role;
 </div>
 
 <?php
-$showAddStudentButton = true;
+$showAddStudentButton = ($role === "admin");
 include "fragments/footer.php";
 ?>
