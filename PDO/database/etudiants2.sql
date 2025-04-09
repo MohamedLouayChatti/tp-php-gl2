@@ -1,5 +1,0 @@
-ALTER TABLE `etudiants` 
-ADD `imageURL` VARCHAR(1100) NULL DEFAULT NULL AFTER `dateDeNaissance`,
-ADD `section` ENUM('GL','RT','IMI','IIA') NULL DEFAULT NULL AFTER `imageURL`;
-
-
