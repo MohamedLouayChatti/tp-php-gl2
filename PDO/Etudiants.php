@@ -1,5 +1,4 @@
 <?php
-session_start();
 include "fragments/header.php";
 include('autoloader.php');
 $etudiantRepository= new RepositoryEtudiant();
@@ -31,7 +30,30 @@ $role = $currentUser->role;
                             <td><?= $etudiant->name ?></td>
                             <td><?= $etudiant->dateDeNaissance ?></td>
                             <td><?= $etudiant->section ?></td>
-                            <td></td>
+                            <td>
+                                <form action="studentDetails.php" method="post" class="d-inline">
+                                <input type="hidden" name="studentId" value="<?= $etudiant->id ?>">
+                                    <button type="submit" class="btn btn-link p-0 text-light btn-lg">
+                                        <i class="bi bi-info-circle fs-3"></i>
+                                    </button>
+                                </form>
+
+                                <?php if ($role === 'admin'): ?>
+                                    <form action="editStudent.php" method="post" class="d-inline">
+                                        <input type="hidden" name="studentId" value="<?= $etudiant->id ?>">
+                                        <button type="submit" class="btn btn-link p-0 text-light btn-lg">
+                                            <i class="bi bi-pencil-square fs-3"></i>
+                                        </button>
+                                     </form>
+
+                                     <form action="deleteStudent.php" method="post" class="d-inline">
+                                        <input type="hidden" name="studentId" value="<?= $etudiant->id ?>">
+                                        <button type="submit" class="btn btn-link p-0 text-light btn-lg">
+                                            <i class="bi bi-eraser-fill fs-3"></i>
+                                        </button>
+                                     </form>
+                                <?php endif; ?>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
@@ -41,5 +63,6 @@ $role = $currentUser->role;
 </div>
 
 <?php
+$showAddStudentButton = true;
 include "fragments/footer.php";
 ?>

@@ -10,17 +10,34 @@
 <script src="https://cdn.datatables.net/buttons/2.3.0/js/buttons.html5.min.js"></script>
 
 <script>
-     $(document).ready(function() {
+    $(document).ready(function() {
+        const buttonConfig = [
+            { extend: 'copy', className: 'btn btn-outline-light me-1' },
+            { extend: 'csv', className: 'btn btn-outline-light me-1' },
+            { extend: 'excel', className: 'btn btn-outline-light me-1' },
+            { extend: 'pdf', className: 'btn btn-outline-light me-1' }
+            <?php if (isset($showAddStudentButton) && $showAddStudentButton): ?>,
+            {
+                text: '<i class="bi bi-person-add" title="Add student"></i>',
+                className: 'btn btn-outline-light me-1',
+                action: function () {
+                    const form = document.createElement('form');
+                    form.method = 'POST';
+                    form.action = 'addStudent.php';
+                    document.body.appendChild(form);
+                    form.submit();
+                }
+            }
+            <?php endif; ?>
+        ];
+
         $('#datatable').DataTable({
             dom: 'Bflrtip',
-            buttons:[{ extend: 'copy', className: 'btn btn-outline-light me-1' },
-                    { extend: 'csv', className: 'btn btn-outline-light me-1' },
-                    { extend: 'excel', className: 'btn btn-outline-light me-1' },
-                    { extend: 'pdf', className: 'btn btn-outline-light me-1' }
-            ]
+            buttons: buttonConfig
         });
     });
 </script>
+
 </body>
 
 </html>

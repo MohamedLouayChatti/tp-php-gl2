@@ -1,8 +1,8 @@
 <?php
-include('autoloader.php');
+include('../autoloader.php');
 $db = ConnexionDB::getInstance();
 
-$query = "SELECT * FROM etudiants";
+$query = "SELECT * FROM etudiant";
 $reponse = $db->query($query);
 $etudiants = $reponse->fetchAll(PDO::FETCH_OBJ);
 

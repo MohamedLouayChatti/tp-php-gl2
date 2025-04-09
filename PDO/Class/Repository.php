@@ -23,7 +23,7 @@ abstract class Repository implements IRepository
     }
     public function delete($id)
     {
-        $query = "delete * from {$this->tableName} where id = :id";
+        $query = "DELETE from {$this->tableName} where id = :id";
         $response = $this->db->prepare($query);
         $response->execute(['id' => $id]);
     }

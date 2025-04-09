@@ -17,7 +17,7 @@
 
         if (isset($_POST['confirm'])) {
             session_destroy();
-            header("Location: Login.php");
+            header("Location: index.php");
             exit();
         } elseif (isset($_POST['cancel'])) {
             header("Location: Home.php");

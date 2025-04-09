@@ -1,5 +1,5 @@
 <?php
-include('autoloader.php');
+include('../autoloader.php');
 
 $rep= new RepositoryEtudiant("etudiants");
 if (!isset($_GET['id'])) {
