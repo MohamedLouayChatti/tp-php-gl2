@@ -25,8 +25,8 @@
         }
         ?>
         <form method="POST">
-            <div class="form-group">
-                <button type="submit" name="confirm" class="form-control btn btn-danger">Yes, Logout</button>
+            <div class="form-group d-flex">
+                <button type="submit" name="confirm" class="form-control btn btn-danger me-2">Yes, Logout</button>
                 <button type="submit" name="cancel" class="form-control btn btn-secondary">Cancel</button>
             </div>
         </form>
